@@ -1,0 +1,42 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method RemotelyLiving\\\\PHPCacheAdapter\\\\CacheItemPool\\\\CacheItem\\:\\:unserialize\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/CacheItemPool/CacheItem.php
+
+		-
+			message: "#^Method RemotelyLiving\\\\PHPCacheAdapter\\\\CacheItemPool\\\\CacheItem\\:\\:unserialize\\(\\) has parameter \\$serialized with no typehint specified\\.$#"
+			count: 1
+			path: src/CacheItemPool/CacheItem.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Cache\\\\CacheItemInterface\\:\\:getTTL\\(\\)\\.$#"
+			count: 1
+			path: src/CacheItemPool/CacheItemPool.php
+
+		-
+			message: "#^Parameter \\#2 \\$ttl of method Psr\\\\SimpleCache\\\\CacheInterface\\:\\:setMultiple\\(\\) expects DateInterval\\|int\\|null, int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/CacheItemPool/CacheItemPool.php
+
+		-
+			message: "#^Parameter \\#1 \\$it of function iterator_to_array expects Traversable, iterable given\\.$#"
+			count: 1
+			path: src/SimpleCache/Chain.php
+
+		-
+			message: "#^Argument of an invalid type array\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/SimpleCache/Memcached.php
+
+		-
+			message: "#^Parameter \\#1 \\$var of function count expects array\\|Countable, bool given\\.$#"
+			count: 1
+			path: src/SimpleCache/Memcached.php
+
+		-
+			message: "#^Parameter \\#3 \\$timeout of method Redis\\:\\:set\\(\\) expects int, int\\|null given\\.$#"
+			count: 1
+			path: src/SimpleCache/Redis.php
+

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  php:
+    volumes:
+      - .:/app
+    external_links:
+      - redis
+      - memcache
+    env_file:
+      - ./tests/.tests.env
+    build: .
+    command: ./app/vendor/bin/phpunit --config=/app/phpunit.xml.dist

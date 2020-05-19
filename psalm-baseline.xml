@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="3.11.4@58e1d8e68e5098bf4fbfdfb420c38d563f882549">
+  <file src="src/CacheItemPool/CacheItemPool.php">
+    <InvalidScalarArgument occurrences="1">
+      <code>($ttl !== '') ? $ttl : $this-&gt;defaultTTL</code>
+    </InvalidScalarArgument>
+    <UndefinedInterfaceMethod occurrences="1">
+      <code>getTTL</code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="src/CacheItemPool/Exceptions/InvalidArgument.php">
+    <InvalidScalarArgument occurrences="1">
+      <code>$e-&gt;getCode()</code>
+    </InvalidScalarArgument>
+  </file>
+  <file src="src/SimpleCache/AbstractAdapter.php">
+    <InvalidArgument occurrences="1">
+      <code>$this-&gt;getMultiple([$key], $default)</code>
+    </InvalidArgument>
+  </file>
+  <file src="src/SimpleCache/Chain.php">
+    <InvalidArgument occurrences="1">
+      <code>$adapter-&gt;getMultiple($keys, $default)</code>
+    </InvalidArgument>
+  </file>
+  <file src="src/SimpleCache/Redis.php">
+    <PossiblyNullArgument occurrences="1">
+      <code>$ttl ?? $this-&gt;getDefaultTTLSeconds()</code>
+    </PossiblyNullArgument>
+  </file>
+</files>
